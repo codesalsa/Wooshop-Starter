@@ -1,0 +1,17 @@
+<ion-view view-title="{{product.title}}">
+  <ion-content class="has-header single-ion-content">
+        <div ng-if="product.title"><h2 ng-bind-html="product.title" class="item-single-title"></h2></div>
+        <div class="item item-image" ng-if="product.featured_src">
+            <img ng-src="{{product.featured_src}}" width="100%" />
+        </div>
+		<div class="item-single-cont" ng-if="product.price_html">
+			<div class="single-price" ng-bind-html="product.price_html"></div>
+			<div class="single-desc" ng-bind-html="product.description"></div>
+		</div>
+	</ion-content>
+	<div ng-if="product.title">
+		<div class="bar bar-footer bar-balanced add-cart-btn">
+			<ngcart-addtocart id="{{ product.id }}" name="{{ product.title }}" price="{{ product.price }}" quantity="1" quantity-max="100" data="product">Add to Cart</ngcart-addtocart>
+		</div>
+	</div>
+</ion-view>

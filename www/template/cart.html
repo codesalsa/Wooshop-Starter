@@ -1,0 +1,11 @@
+<ion-view view-title="Cart">
+    <ion-content id="ion-cart-content">
+        <div class="cart-listing">
+            <ngcart-cart></ngcart-cart>
+        </div>
+    </ion-content>
+    
+</ion-view> 
+<div class="bar bar-footer bar-balanced add-cart-btn">
+	<ngcart-checkout class="checkout-btn" service="http" settings="{ url:'/#/checkout' }">Checkout</ngcart-checkout>
+</div>

@@ -1,0 +1,101 @@
+<div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
+        <div class="cart-top-bar">
+            <div class="left">
+                My Cart ( <span ng-bind-html="ngCart.getTotalItems()"></span> <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize> )
+            </div>
+            <div class="right">
+                <span ng-click="ngCart.empty()">
+                    <i class="fa fa-trash-o"></i> Remove All
+                </span>
+            </div>
+        </div>
+        <div class="cart-items">
+            <div class="item" ng-repeat="item in ngCart.getCart().items track by $index">
+                <div class="item-image">
+                    <a href="#/app/products/{{item.getId()}}">
+                        <img src="{{ item.getData().featured_src }}" />
+                    </a>
+                </div>
+                <div class="item-detail">
+                    <div class="item-title">{{ item.getName() }}</div>
+                    <div class="item-quantity">
+                        <span ng-class="{'disabled':item.getQuantity()==1}"
+						  ng-click="item.setQuantity(-1, true)">
+                            <i class="fa fa-minus-square"></i></span>&nbsp;&nbsp;
+					       {{ item.getQuantity() | number }}&nbsp;&nbsp;
+					    <span ng-click="item.setQuantity(1, true)">
+                           <i class="fa fa-plus-square"></i>
+                        </span>
+                    </div>
+                    <div class="item-price">
+                        <span ng-bind-html="ngCart.getCurrency()"></span>{{ item.getPrice()}}
+                    </div>
+                </div>
+                <div class="item-bottom item-total">
+                    <p class="txt">Item Total Price</p>
+                    <span ng-bind-html="ngCart.getCurrency()"></span>{{ item.getTotal()}}
+                </div>
+                <div class="item-del">
+                    <span ng-click="ngCart.removeItemById(item.getId())">
+                        <i class="fa fa-trash-o"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="payment-summary">
+            <h4 class="summary-title">Payment Summary</h4>
+            <div class="summary">
+                <div class="row">
+                    <div class="lft">Total Items</div>
+                    <div class="rt">
+                        <span>{{ ngCart.getTotalItems() }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="lft">Value of Items</div>
+                    <div class="rt">
+                        <span ng-bind-html="ngCart.getCurrency()"></span>{{ ngCart.getSubTotal() }}                       </div>
+                </div>
+                <div class="row" ng-show="ngCart.getShipping()">
+                    <div class="lft">Shipping Charges</div>
+                    <div class="rt"><span ng-bind-html="ngCart.getCurrency()"></span>
+                        {{ ngCart.getShipping() }}
+                    </div>
+                </div>
+                <div class="row" ng-show="ngCart.getTax()">
+                    <div class="lft">Tax on Items</div>
+                    <div class="rt"><span ng-bind-html="ngCart.getCurrency()"></span>
+                        {{ ngCart.getTax() }}
+                    </div>
+                </div>
+                <div class="row final-payment">
+                    <div class="lft">Final Payment</div>
+                    <div class="rt"><span ng-bind-html="ngCart.getCurrency()"></span>
+                        {{ ngCart.totalCost() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+        <div class="empty-cart-container">
+            <div class="empty-cart-inner">
+                <p class="empty-cart-head">Your cart is currently Empty</p>
+                <p class="empty-cart-subhead">We recommend you to browse through our popular categories</p>
+                <p class="empty-cart-btn">
+                    <a href="#/app/categories">Start Shopping</a>
+                </p>
+            </div>
+        </div>
+        <div class="empty-cart-img"><img src="img/shopping_girl.png" /></div>
+</div>
+	<style>
+		.item-quantity span[ng-click] {
+			cursor: pointer;
+		}
+		.item-quantity span.disabled .fa {
+			color:#aaa;
+		}
+	</style>

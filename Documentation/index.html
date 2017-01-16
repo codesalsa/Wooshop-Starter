@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Codesalsa Wooshop Starter - Documentation</title>
+<link rel="alternate" type="application/rss+xml" title="egrappler.com" href="feed/index.html">
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet"
+        type="text/css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prettify.css">
+</head>
+<body >
+<nav>
+  <div class="container">
+    <h1>Codesalsa Wooshop Starter</h1>
+</nav>
+<header>
+  <div class="container">
+    <h2 class="docs-header"> Codesalsa Wooshop Starter - User Documentation</h2>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <ul class="docs-nav" id="menu-left">
+      <li><strong>Introducing Wooshop</strong></li>
+      <li><a href="#intro" class=" ">Introduction</a></li>
+      <li><a href="#features" class=" ">Features</a></li>
+      <li class="separator"></li>
+      <li><strong>How to Install</strong></li>
+      <li><a href="#installation" class=" ">Installation Instructions</a></li>
+      <li><a href="#install_ionic" class=" ">Installing Ionic</a></li>
+      <li><a href="#install_newsionic" class=" ">Installing Wooshop</a></li>
+	  
+	  <li class="separator"></li>
+      <li><strong>Building your APP</strong></li>
+      <li><a href="#building_ios" class=" ">Building for iOS</a></li>
+      <li><a href="#building_android" class=" ">Building for Android</a></li>
+	  
+	  <li class="separator"></li>
+      <li><strong>Additional Resources</strong></li>
+      <li><a href="#additional_01" class=" ">Splash Screens and App Icons</a></li>
+      <li><a href="#changelog" class=" ">Changelog</a></li>
+      <li><a href="#credits" class=" ">Source & Credits</a></li>
+      <li><a href="#support" class=" ">Support</a></li>
+    </ul>
+    <div class="docs-content">
+		<p class="alert">Thank you for your Interest in Codesalsa Wooshop Starter, a Phonegap based Hybrid E-commerce App for IOS, Android platform built with AngularJS, IONIC Framework and Woocommerce REST-API. If you have already purchased this Code and have Questions then please take some time to read through this documentation and take notice of the instructions listed here, as many support related questions can be answered simply by re-reading these instructions. We will frequently update Codesalsa Wooshop Starter to add new features and fix bugs.</p>
+		
+		<p class="alert"><strong>Note: This Codesalsa Woocommerce Starter is a purely starter base code. It doesn't contain any code related to Store checkout and User authentication. In our future release we may add these features in our Advanced Version.</strong></p>
+	
+      <h2> Introducing Wooshop</h2>
+      <h3 id="intro"> Introduction</h3>
+      <p> Codesalsa Wooshop Starter is a Phonegap based Hybrid E-commerce App for IOS, Android platform built with AngularJS, IONIC Framework and Woocommerce REST API. It is also integrated with different cordova plugins. This Hybrid Application is mainly meant for E-commerce Portals developed using Wordpress CMS platform and Woocommerce plugin.</p>
+	  
+	  <p><img src="images/main_design.png" /></p>
+	  
+      <h3 id="features"> Features</h3>
+	  
+	  <p>Codesalsa Wooshop Starter Hybrid E-commerce Application is mainly meant for building Mobile App for any E-commerce portals developed using Wordpress and woocommerce platform. This app is developed with several general as well as advanced features. These are: </p>
+	  
+	  <ul>
+	  <li>List All Products</li>
+	  <li>List All Product Categories</li>
+	  <li>Filter Products by Category</li>
+	  <li>Single Product View</li>
+	  <li>Add product to Cart</li>
+	  <li>Quick Shopping Cart View</li>
+	  <li>Integrated with NG-CART</li>
+	  <li>Use of Woocommerce REST API</li>
+	  <li>Localstorage product show</li>
+	  <li>Image Caching</li>
+	  </ul>
+	  
+	   <p><img src="images/marketing01.png" /></p>
+	   <p><img src="images/marketing02.png" /></p>
+	   <p><img src="images/marketing03.png" /></p>
+	   <p><img src="images/marketing04.png" /></p>
+	   <p><img src="images/marketing05.png" /></p>
+	   <p><img src="images/marketing06.png" /></p>
+	   <p><img src="images/marketing07.png" /></p>
+	   <p><img src="images/marketing08.png" /></p>
+	  
+	  <hr />
+      <h2> How to Install</h2>
+	  <h3 id="installation"> Installation Instruction</h3>
+      <p> In this Section we will show you how to install the Ionic Framework and Cordova using npm (the Node Package Manager), Install Codesalsa Wooshop for first use, and how to Build your Application for Android or iOS.</p>
+	  
+	  
+      <h3 id="install_ionic"> Installing Ionic</h3>
+ 
+		<p>Make sure you have an up-to-date version of Node.js installed on your system. If you don't have Node.js installed, you can install it from <a href="http://nodejs.org/">here</a>.</p>
+		
+		<p>Open a terminal window (Mac) or a command window (Windows), and install Cordova and Ionic:</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">npm install </span><span class="pun">-</span><span class="pln">g cordova ionic</span></li></ol></pre>
+		
+		<p>On a Mac, you may have to use  sudo depending on your system configuration:</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">sudo npm install -g cordova ionic</span></li></ol></pre>
+		
+		<p>If you already have Cordova and Ionic installed on your computer, make sure you update to the latest version:</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">npm update -g cordova ionic</span></li></ol></pre>
+		<p>or</p>
+		<pre><ol class="linenums"><li class="L0"><span class="pln">sudo npm update -g cordova ionic</span></li></ol></pre>
+		<br />
+		
+	  <h3 id="install_newsionic"> Installing Codesalsa Wooshop</h3>
+ 
+		<p>After you have Installed all the Prerequites, you can now start by creating a Sidemenu App. To do so, run this Command from your command prompt.</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">ionic start [Your App Name] sidemenu</span></li></ol></pre>
+		
+		<p>This will create a folder named as you entered with a Sidemenu application inside. Afterwards, just replace the www folder with the one of the www folders from the wooshop-starter package. This will create the wooshop-starter App.</p>
+		
+		<p>Now to test your application in the browser, go to the wooshop-starter folder that Ionic just created for you and run this command.</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">ionic serve</span></li></ol></pre>
+
+		
+		<p>Now your App is installed with Ionic platform. Next step is to setup your woocommerce store ready with some products and categories.</p>
+		
+		<p>To install and setup woocommerce on your wordpress site, we recommend to follow this <a href="https://docs.woothemes.com/document/installing-uninstalling-woocommerce/" target="_blank">step-by-step guide</> provided by <a href="https://docs.woothemes.com/document/installing-uninstalling-woocommerce/" target="_blank">Woothemes</a>.<p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">https://docs.woothemes.com/document/installing-uninstalling-woocommerce/</span></li></ol></pre>
+		
+		<p>Once you are ready with your Woocommerce store setup and published some products with thumbnail images and created some categories with category images, now its time to fetch the Woocommerce store data into our Codesalsa Wooshop app. But before that, make sure your web-store is already enabled with <strong>Woocommerce Rest API</strong> (It comes default with woocommerce installation in woocommerce settings).</p>
+		
+		<p>Now we need one more PHP api file to be uploaded to the root directory of our woocommerce store. Download and upload <strong>PHP wrapper for the WooCommerce REST API</strong> to your root directory where your wordpress core files are located </p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">https://github.com/kloon/WooCommerce-REST-API-Client-Library</span></li></ol></pre>
+		
+		<p>Also for reference, we have included the <strong>mobileAPI</strong> directory along with the wooshop source codes. You just need to enter your store configuration details in API.php file.</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">$client = new WC_API_Client( 'YOUR_WOOCOMMERCE_STORE_URL',<br /> 'YOUR_WOOCOMMERCE_CONSUMER_KEY', <br />'YOUR_WOOCOMMERCE_CONSUMER_SECRET', $options );</span></li></ol></pre>
+		
+		<p>You can also follow this wootheme's guide on <strong>Enabling Woocommerce Rest API</strong>.</p>
+		
+		<pre><ol class="linenums"><li class="L0"><span class="pln">https://docs.woothemes.com/document/woocommerce-rest-api/</span></li></ol></pre>
+		
+		<p><strong>Note: We always insist on using the PHP Rest API files (mobileAPI) provided with Wooshop source files, as the API is bit modified based on the theme structure we are managing</strong>.</p>
+		
+		<p>Now, as we are ready with our own Woocommerce stores with the PHP Rest API for Woocommerce, its time to setup the Codesalsa Wooshop code to work with our store and PHP API.</p>
+		
+		<p>Open the <strong>www</strong> directory within <strong>wooshop</strong> directory. Now open the <strong>js</strong> directory and edit the <strong>settings.js</strong> file with your favourite code editor</p>
+		
+		<p>In settings.js file, at <strong>line No. 3</strong> change the <strong>YOUR_WOOCOMMERCE_STORE_URL</strong> with your actual store url.
+
+		<pre><ol class="linenums"><li class="L0"><span class="pln">https://crossorigin.me/http://YOUR_WOOCOMMERCE_STORE_URL/mobileAPI</span></li></ol></pre>
+		
+		<p>On line no. 5, change the <strong>tax_rate</strong> to your desired percentage.</p>
+		
+		<p>On ine no. 7, change the <strong>shipping_charge</strong> to your desired shipping charge.</p>
+		
+		
+		<p>That's it. Now your app is ready to talk with your Woocommerce store API and ready to be published to respective app stores.</p>
+		
+		
+		
+		
+		<hr />
+      <h2> Building Your App</h2>
+      <h3 id="building_ios"> Building for iOS</h3>
+	  
+	  <div style="box-sizing: border-box; margin: 0px 0px 10px;" class="alert alert-info">You need the iOS SDK installed on your computer to build an iOS version of your application using the steps below.</div>
+	
+	
+	  <p>On the command line, make sure you are in the /wooshop directory.</p>
+	  <p>Add support for the iOS platform:</p>
+
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic platform add ios</span></li></ol></pre>
+	  
+	  <p>Build the project:</p>
+	  
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic build ios</span></li></ol></pre>
+	  
+	  <p>Open conference.xcodeproj in the wooshop/platforms/ios directory</p>
+	  
+	  <p>In Xcode, run the application on a device connected to your computer or in the iOS emulator</p>
+	  
+      <h3 id="building_android"> Building for Android</h3>
+	  
+	  <div style="box-sizing: border-box; margin: 0px 0px 10px;" class="alert alert-info">
+	You need the Android SDK installed on your computer to build an Android version of your application using the steps below.</div>
+	  
+	  <p>Make sure the Android SDK and the ant build tool are available on your system. The Android SDK is available&nbsp;<a  href="http://developer.android.com/sdk/index.html">here</a>.&nbsp; Both the <strong>android</strong> and <strong>ant </strong>tools must be available in your path</strong>. To test your configuration, you should be able to execute both&nbsp;<strong>android</strong>&nbsp;and&nbsp;<strong>ant</strong>&nbsp;from the command line.</p>
+	  
+	  <p>On the command line, make sure you are in the  wooshop/ directory</p>
+	  
+	  <p>Add support for the Android platform:</p>
+	  
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic platform add android</span></li></ol></pre>
+	  <p>Build the project:</p>
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic build android</span></li></ol></pre>
+	  
+	  <p>The project is built in the  <strong>wooshop/platforms/android </strong>folder</p>
+	  <p>To build and run the application on an Android device connected to your computer using a USB cable:</p>
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic run android</span></li></ol></pre>
+	  
+	  <p>To build and run the application in the Android emulator:</p>
+	  <pre><ol class="linenums"><li class="L0"><span class="pln">ionic emulate android</span></li></ol></pre>
+	  
+	  <hr />
+      <h2> Additional Resources</h2>
+	  <h3 id="additional_01"> Splash Screens and App Icons</h3>  
+      
+	  <p>The Wooshop code base also contain some additional resources in the type of Splash Screen and App Icons. You can find the resources at : <strong>wooshop/resources</strong> directory.</p>
+	  
+	  <p><img src="images/splash.png" /></p>
+	  <p><img src="images/icon.png" width="80" /></p>
+	  
+	   <h3 id="changelog"> Changelog</h3>
+	   
+	   <h4>Version 1.0 - 01 January 2016</h4>
+		<ul>
+			<li>
+				<strong>Initial Release</strong>
+			</li>
+		</ul>
+		
+	   <h3 id="credits"> Sources &amp; Credits</h3>
+	   
+	   <p>Codesalsa Wooshop Starter is using the following sources of plugins / files in the app. A great thanks to them who have invested their time and effort to contribute these plugins / files to the open-source community</p>
+	   
+	   <ul>
+			<li><a href="http://cordova.apache.org/">Cordova</a></li>
+			<li><a href="https://angularjs.org/">AngularJS</a></li>
+			<li><a href="http://ionicframework.com/">Ionic Framework</a></li>
+			<li><a href="http://graphicburger.com/ui-kits/">UI Kits for the Codecanyon Screen Images</a></li>
+			<li><a href="http://wordpress.org">Wordpress.org</a></li>
+			<li><a href="https://wordpress.org/plugins/woocommerce/">Wordpress woocommerce Plugin</a></li>
+			<li><a href="https://www.woothemes.com/">Woothemes for woocommerce Installation documentation</a></li>
+			<li><a href="https://github.com/kloon/WooCommerce-REST-API-Client-Library">PHP wrapper for the WooCommerce REST API by Kloon</li>
+			<li><a href="https://github.com/snapjay/ngCart">NG-CART - Really simple shopping cart for AngularJS</a></li>
+	   </ul>
+	   
+	   
+	   <h3 id="support"> Support</h3>
+		
+		<p>Once again thank you so much for purchasing the code. We Team Codesalsa is always ready to help you out in any critical situation. No guarantees, but We will do our best to assist. If you have a more general question related to the code, you might consider reaching us at : <a href="mailto:support@codesalsa.net">Support@codesalsa.net</a>.</p>
+		
+		<p>We will try our best to assist with questions directly related to the Application, however please note that code support is completely voluntary. Therefore before you contact me, please consider finding an answer to your question in:</p>
+		
+		<ul>
+			<li>The relevant section of the documentation</li>
+			<li>StackOverflow</li>
+			<li>Google for general questions</li>
+		</ul>
+		
+		<p>In any case, if you need any custom development, app customization, code integration, IOS / Android app build etc. you can drop us an email at : <strong><a href="mailto:support@codesalsa.net">support@codesalsa.net</a>. </p>
+	  
+    </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="container">
+    <h4>In any case, if you need any custom development, app customization, code integration, IOS / Android app build etc. you can drop us an email at : <strong><a href="mailto:support@codesalsa.net" style="color:orange;">support@codesalsa.net</a>.</h4>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p> &copy; 2016 Codesalsa - Wooshop Starter App </p>
+  </div>
+</footer>
+<script src="js/jquery.min.js"></script> 
+ 
+<script type="text/javascript" src="js/prettify/prettify.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+ <script src="js/jquery.localscroll-1.2.7.js" type="text/javascript"></script>
+ <script src="js/jquery.scrollTo-1.4.3.1.js" type="text/javascript"></script>
+</body>
+</html>

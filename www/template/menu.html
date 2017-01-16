@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+	  <ion-nav-buttons side="right">
+        <ngcart-summary></ngcart-summary>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <div class="sidemenu-header">
+		<div class="profile-block">
+			<div class="" ng-if="profile.picture">
+                <img src="{{profile.picture}}"/>
+            </div>
+            <div class="" ng-if="!profile.picture">
+                <img src="img/profile_img.png"/>
+            </div>
+			<h3>John Done</h3>
+            <p>john@gmail.com</p>
+		</div>
+	</div>
+    <ion-content class="cat-sidebar">
+      <ion-list>
+        <ion-item menu-close href="#/app/categories">
+          <i class="fa fa-archive"></i> All Categories
+        </ion-item>
+        <ion-item menu-close href="#/app/products">
+          <i class="fa fa-heart"></i> All Products
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
